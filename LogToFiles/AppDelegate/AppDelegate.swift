@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             
-            print("----- APP START -----\n\nDate: \(Date())\n\n", to: &Log.log)
+            print(
+                "----- APP START -----\n\nDate: \(Date())\n\n",
+                to: &Log.log)
             
             return true
         }
