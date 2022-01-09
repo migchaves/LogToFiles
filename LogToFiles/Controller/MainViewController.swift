@@ -12,6 +12,12 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var messageTextField: UITextField!
     
+    // MARK: - Handle touch
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Actions
     
     @IBAction func handleLogMessage() {
@@ -25,6 +31,7 @@ class MainViewController: UIViewController {
         print(text, to: &Log.log)
         
         self.showAlert("Information saved")
+        self.messageTextField.text = ""
     }
     
     @IBAction func handleSendLogs() {
